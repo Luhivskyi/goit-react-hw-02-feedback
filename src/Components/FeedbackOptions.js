@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const FeedbackOptions = ({ options, handleClickButton }) => (
     
@@ -12,5 +13,11 @@ const FeedbackOptions = ({ options, handleClickButton }) => (
 
 
 )
+
+FeedbackOptions.propTypes = {
+   options: PropTypes.string.isRequired,
+  handleClickButton: PropTypes.func.isRequired,
+};
+
 
 export default FeedbackOptions;
