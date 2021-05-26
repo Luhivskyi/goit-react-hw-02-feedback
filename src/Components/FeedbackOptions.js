@@ -6,7 +6,7 @@ const FeedbackOptions = ({ options, handleClickButton }) => (
     <>
         {options.map(elem => (
 
-            <button key="elem" onClick={() => handleClickButton(elem)}>{elem }</button>
+            <button key={elem} onClick={() => handleClickButton( elem )}>{elem }</button>
             
         ))}
     </>
@@ -15,7 +15,7 @@ const FeedbackOptions = ({ options, handleClickButton }) => (
 )
 
 FeedbackOptions.propTypes = {
-   options: PropTypes.string.isRequired,
+   options: PropTypes.arrayOf(PropTypes.string).isRequired,
   handleClickButton: PropTypes.func.isRequired,
 };
 
